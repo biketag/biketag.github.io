@@ -1,0 +1,102 @@
+---
+# Only the main Sass file needs front matter (the dashes are enough)
+---
+
+// Our variables
+$base-font-family: "league_spartanregular", "Helvetica Neue", Helvetica, Arial, sans-serif;
+$base-font-size:   16px;
+$base-font-weight: 400;
+$small-font-size:  $base-font-size * 0.875;
+$base-line-height: 1.5;
+
+$spacing-unit:     30px;
+
+$text-color:       #111;
+$background-color: #fdfdfd;
+$brand-color:      #2a7ae2;
+
+$grey-color:       #828282;
+$grey-color-light: lighten($grey-color, 40%);
+$grey-color-dark:  darken($grey-color, 25%);
+
+// Width of the content area
+$content-width:    800px;
+
+$on-palm:          600px;
+$on-laptop:        800px;
+
+
+
+// Use media queries like this:
+// @include media-query($on-palm) {
+//     .wrapper {
+//         padding-right: $spacing-unit / 2;
+//         padding-left: $spacing-unit / 2;
+//     }
+// }
+@mixin media-query($device) {
+    @media screen and (max-width: $device) {
+        @content;
+    }
+}
+
+
+// Import partials from `sass_dir` (defaults to `_sass`)
+@import "reset",
+        "base",
+        "layout",
+        "syntax-highlighting",
+        "typography"
+;
+
+#title {
+  position: fixed;
+	top: 0;
+  width: 100%;
+  z-index: 1;
+  background-color: red;
+  padding: 20px;
+
+
+  color: white;
+  font-family: "knewaveregular", "Comic Sans MS";
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: 1px;
+}
+
+#title-spacer {
+	height: 72px;
+}
+
+#info-pane {
+  position: absolute;
+  margin-top: 30%;
+  width: 200px;
+  padding-left: 25px;
+}
+
+#photo-grid {
+	margin-left: 230px;
+}
+
+.card .front {
+  background-size: cover;
+}
+
+.spot-phot {
+  height: 100%;
+  width: 100%;
+}
+
+.grid-item {
+  width: 200px;
+  height: 300px;
+  border: solid white 2px;
+}
+
+
+
+
+
+

@@ -1,0 +1,106 @@
+---
+layout: default
+---
+<script src="https://npmcdn.com/masonry-layout@4.0/dist/masonry.pkgd.min.js"></script>
+<script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+<script src="https://cdn.rawgit.com/nnattawat/flip/v1.0.19/dist/jquery.flip.min.js"></script>
+
+<h2 id="title">Get Bike Tag in the App Store</h2>
+<div id="title-spacer"></div>
+
+<div id="info-pane">
+  <div class="logo"></div>
+  <h2 class="title">
+    BIKE TAG
+  </h2>
+  <p>
+    is a game for discovering and sharing secret spots in your city.
+  </p>
+</div>
+
+<div id="photo-grid">
+  <div class="grid">
+    <div class="card card1 grid-item">
+      <div class="front" style="background-image: url('/images/tag-1.jpg');">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card2 grid-item">
+      <div class="front" style="background-image: url('/images/tag-2.jpg');">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card2 grid-item">
+      <div class="front" style="background-image: url('/images/tag-3.jpg')">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card2 grid-item">
+      <div class="front" style="background-image: url('/images/tag-4.jpg')">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card2 grid-item">
+      <div class="front" style="background-image: url('/images/tag-5.jpg')">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card1 grid-item">
+      <div class="front" style="background-image: url('/images/tag-6.jpg')">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card2 grid-item">
+      <div class="front" style="background-image: url('/images/tag-7.jpg')">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card1 grid-item">
+      <div class="front" style="background-image: url('/images/tag-8.jpg')">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+    <div class="card card1 grid-item">
+      <div class="front" style="background-image: url('/images/tag-9.jpg')">
+      </div>
+      <div class="back">
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+$(function() {
+  $(".card").flip();
+  // Start some cards face down
+  $(".card2").flip(true);
+  var elem = document.querySelector('.grid');
+  var msnry = new Masonry( elem, {
+    // options
+    itemSelector: '.grid-item'
+  });
+	function flipRandomCard() {
+		var index = randomInt($(".card").length);
+		console.log("flipping", index);
+		$($(".card")[index]).flip("toggle");
+
+		var timeout = randomInt(6000, 2000);
+		console.log("waiting", timeout);
+		setTimeout(function() { flipRandomCard(); }, timeout);
+	}
+
+	function randomInt(max, min = 0) {
+		var random = Math.floor(Math.random() * (max - min));
+		return random + min
+  }
+  setTimeout(flipRandomCard, 2000);
+});
+</script>
