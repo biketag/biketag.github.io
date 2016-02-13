@@ -55,21 +55,29 @@ $on-laptop:        800px;
   width: 100%;
   z-index: 2;
   background-color: red;
-  padding: 20px;
-
-
+  padding: 20px 0;
+  font-size: 20px;
+  font-family: "knewaveregular", "Comic Sans MS";
+  letter-spacing: 1px;
   text-align: center;
   a {
     color: white;
-    font-family: "knewaveregular", "Comic Sans MS";
-    font-size: 20px;
-    letter-spacing: 1px;
     text-decoration: none;
   }
 }
 
 .banner-spacer {
   height: 72px;
+}
+
+@include media-query($on-palm) {
+  .banner {
+    font-size: 16px;
+    padding: 16px 0;
+  }
+  .banner-spacer {
+    height: 56px;
+  }
 }
 
 #info-pane {
@@ -110,6 +118,10 @@ $on-laptop:        800px;
   margin-left: 200px;
 }
 
+.card {
+  background: #999;
+}
+
 .card .front {
   background-size: cover;
 }
@@ -125,6 +137,31 @@ $on-laptop:        800px;
   border: solid white 2px;
 }
 
+@include media-query($on-palm) {
+  #info-pane {
+    position: static;
+    width: 100%;
+    padding: 0;
+    .logo {
+      margin-top: 0;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .tagline {
+      margin-top: 24px;
+      width: auto;
+    }
+  }
+  #photo-grid {
+    margin: 0;
+  }
+  .grid-item {
+    width: 100%;
+    height: 600px;
+    border-left: none;
+    border-right: none;
+  }
+}
 
 
 
