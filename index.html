@@ -87,28 +87,34 @@ layout: default
 
 <script>
 $(function() {
-  $(".card").flip();
-  // Start some cards face down
-  $(".card2").flip(true);
-  var elem = document.querySelector('.grid');
-  var msnry = new Masonry( elem, {
-    // options
-    itemSelector: '.grid-item'
-  });
-	function flipRandomCard() {
-		var index = randomInt($(".card").length);
-		console.log("flipping", index);
-		$($(".card")[index]).flip("toggle");
-
-		var timeout = randomInt(6000, 2000);
-		console.log("waiting", timeout);
-		setTimeout(function() { flipRandomCard(); }, timeout);
-	}
-
-	function randomInt(max, min = 0) {
-		var random = Math.floor(Math.random() * (max - min));
-		return random + min
+  function FlipGrid($el) {
+    this.$el = $el;
+    this.$cards = $el.find(".card");
+    this.init();
   }
-  setTimeout(flipRandomCard, 2000);
+
+  FlipGrid.prototype.init = function() {
+    this.$cards.flip();
+    // Start some cards face down
+    this.$el.find(".card2").flip(true);
+    var flipGrid = this;
+    setTimeout( function() { flipGrid.flipRandomCard() }, 2000);
+  }
+
+  FlipGrid.prototype.flipRandomCard = function() {
+    var index = randomInt(this.$cards.length);
+    $(this.$cards[index]).flip("toggle");
+
+    var timeout = randomInt(3000, 1000);
+    var flipGrid = this;
+    setTimeout(function() { flipGrid.flipRandomCard(); }, timeout);
+
+    function randomInt(max, min = 0) {
+      var random = Math.floor(Math.random() * (max - min));
+      return random + min
+    }
+  }
+
+  var flipGrid = new FlipGrid($('.grid'));
 });
 </script>
