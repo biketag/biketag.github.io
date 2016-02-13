@@ -51,7 +51,7 @@ $on-laptop:        800px;
 
 #title {
   position: fixed;
-	top: 0;
+  top: 0;
   width: 100%;
   z-index: 1;
   background-color: red;
@@ -66,18 +66,41 @@ $on-laptop:        800px;
 }
 
 #title-spacer {
-	height: 72px;
+  height: 72px;
 }
 
 #info-pane {
   position: absolute;
-  margin-top: 30%;
-  width: 200px;
+  width: 170px;
   padding-left: 25px;
+  padding-right: 25px;
+  z-index: 10;
+
+  .logo {
+    margin-top: 130px;
+    background-image: url("/images/logo.gif");
+    background-size: cover;
+    height: 170px;
+    width: 170px;
+  }
+
+  h2.title {
+    margin-top: -30px;
+    text-align: center;
+    font-size: 25px;
+  }
+
+  .tagline {
+    background: white;
+    margin-left: 25px;
+    width: 403px;
+    font-size: 18px;
+  }
+
 }
 
 #photo-grid {
-	margin-left: 230px;
+  margin-left: 200px;
 }
 
 .card .front {
