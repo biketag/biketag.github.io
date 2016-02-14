@@ -125,6 +125,16 @@ $(function() {
     }
   }
 
-  var flipGrid = new FlipGrid($('.grid'));
+  function isLargeScreen() {
+    if(window.innerWidth > 600) {
+      return true;
+    } else {
+      return false;
+    }
+  }
+
+  if( isLargeScreen() ) {
+    var flipGrid = new FlipGrid($('.grid'));
+  }
 });
 </script>
