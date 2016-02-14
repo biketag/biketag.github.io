@@ -123,11 +123,7 @@ $on-laptop:        800px;
 
 .card .front {
   background-size: cover;
-}
-
-.spot-phot {
   height: 100%;
-  width: 100%;
 }
 
 .grid-item {
@@ -165,22 +161,26 @@ $on-laptop:        800px;
     position: static;
     width: 100%;
     padding: 0;
+
     .logo {
       margin-top: 0;
       margin-left: auto;
       margin-right: auto;
     }
+
     .tagline {
       margin-top: 24px;
       width: auto;
     }
   }
+
   #photo-grid {
     margin: 0;
   }
+
   .grid-item {
-    width: 100%;
-    height: 600px;
+    width: 100vw;
+    height: 150vw;
     border-left: none;
     border-right: none;
   }
