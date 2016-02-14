@@ -133,6 +133,38 @@ $on-laptop:        800px;
   margin: 2px;
 }
 
+.footer {
+  padding-top: 10px;
+  clear: both;
+  font-size: 10px;
+
+  ul {
+    margin-right: 40px;
+    li {
+      margin-right: 10px;
+      display: block;
+      float: right;
+      a {
+        color: $text-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
+@include media-query($on-palm) {
+  .footer {
+    padding-top: 40px;
+    ul {
+      margin-right: 0;
+      li {
+        float: none;
+        text-align: center;
+      }
+      margin-bottom: 40px;
+    }
+  }
+}
+
 #actions {
   font-family: $secondary-font-family;
   position: fixed;
