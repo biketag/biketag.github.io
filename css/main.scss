@@ -216,8 +216,8 @@ $on-laptop:        800px;
   .grid-item {
     width: 100vw;
     height: 150vw;
-    border-left: none;
-    border-right: none;
+    margin-left: 0;
+    margin-right: 0;
   }
 
   #actions {
