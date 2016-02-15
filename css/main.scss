@@ -135,7 +135,7 @@ $on-laptop:        800px;
 }
 
 .footer {
-  padding-top: 10px;
+  padding-top: 5px;
   clear: both;
   font-size: 10px;
 
@@ -154,14 +154,15 @@ $on-laptop:        800px;
 }
 @include media-query($on-palm) {
   .footer {
-    padding-top: 40px;
+    padding-top: 20px;
     ul {
       margin-right: 0;
+      margin-left: 0;
       li {
         float: none;
         text-align: center;
       }
-      margin-bottom: 40px;
+      margin-bottom: 50px;
     }
   }
 }
