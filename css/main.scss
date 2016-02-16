@@ -85,7 +85,7 @@ $on-laptop:        800px;
 }
 
 #info-pane {
-  position: absolute;
+  position: fixed;
   width: 170px;
   padding-left: 25px;
   padding-right: 25px;
@@ -116,6 +116,12 @@ $on-laptop:        800px;
     font-size: 18px;
   }
 
+}
+
+@include media-query($on-palm) {
+  #info-pane {
+     position: absolute;
+  }
 }
 
 #photo-grid {
@@ -181,7 +187,6 @@ $on-laptop:        800px;
   a {
     font-size: 20px;
     color: $red-color;
-    text-shadow: 0 0 1px rgba(0,0,0, 0.5);
   }
   a:hover {
     // Want underline a little lower than standard link underline so using a
