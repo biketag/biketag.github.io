@@ -5,7 +5,8 @@ title: Privacy Policy
 
 Bike Tag collects location data and photos as part of game play. We *only* use
 this information in pursuit of game play, and never share this information with
-a third party. For more details on what we collect read below.
+a third party. For more details on what information we collect and why,
+read below.
 
 Location is monitored while the app is open to determine which spots are most
 relevant to you (so we don't show you a spot in Hawaii while you're biking
