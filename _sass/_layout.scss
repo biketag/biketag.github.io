@@ -167,6 +167,11 @@
 /**
  * Page content
  */
+
+.page {
+  padding: $spacing-unit;
+}
+
 .page-content {
     padding: $spacing-unit 0;
 }
@@ -203,7 +208,7 @@
     margin-bottom: $spacing-unit;
 }
 
-.post-title {
+.post-title, .page-title {
     font-size: 42px;
     letter-spacing: -1px;
     line-height: 1;
@@ -214,7 +219,7 @@
 }
 
 .post-content {
-    margin-bottom: $spacing-unit;
+    margin: $spacing-unit;
 
     h2 {
         font-size: 32px;
